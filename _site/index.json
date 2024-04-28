@@ -1,0 +1,57 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "org.example | example.org",
+    "keywords": "org.example"
+  },
+  "api/Example.Application.Common.Models.Result.html": {
+    "href": "api/Example.Application.Common.Models.Result.html",
+    "title": "Class Result | example.org",
+    "keywords": "Class Result Namespace Example.Application.Common.Models Assembly Example.Application.dll public class Result Inheritance object Result Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Errors public string[] Errors { get; init; } Property Value string[] Succeeded public bool Succeeded { get; init; } Property Value bool Methods Failure(IEnumerable<string>) public static Result Failure(IEnumerable<string> errors) Parameters errors IEnumerable<string> Returns Result Success() public static Result Success() Returns Result"
+  },
+  "api/Example.Application.Common.Models.html": {
+    "href": "api/Example.Application.Common.Models.html",
+    "title": "Namespace Example.Application.Common.Models | example.org",
+    "keywords": "Namespace Example.Application.Common.Models Classes Result"
+  },
+  "api/Example.Domain.Common.BaseAuditableEntity.html": {
+    "href": "api/Example.Domain.Common.BaseAuditableEntity.html",
+    "title": "Class BaseAuditableEntity | example.org",
+    "keywords": "Class BaseAuditableEntity Namespace Example.Domain.Common Assembly Example.Domain.dll This class inherits from BaseEntity, which means it gains the domain event capabilities. Auditable entities can also raise domain events when created or modified. public abstract class BaseAuditableEntity : BaseEntity Inheritance object BaseEntity BaseAuditableEntity Inherited Members BaseEntity.Id BaseEntity.DomainEvents BaseEntity.AddDomainEvent(BaseEvent) BaseEntity.RemoveDomainEvent(BaseEvent) BaseEntity.ClearDomainEvent() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Created Each entity has a unique Id property, automatically generated as a GUID string. public DateTimeOffset Created { get; set; } Property Value DateTimeOffset CreatedBy This property stores information about the user who created the entity. This is often a username, user ID, or another identifier depending on your application's user management system. public string? CreatedBy { get; set; } Property Value string LastModified Similar to Created, this property tracks the date and time when the entity was last modified or updated. public DateTimeOffset LastModified { get; set; } Property Value DateTimeOffset LastModifiedBy This property stores information about the user who last modified the entity, similar to CreatedBy. public string? LastModifiedBy { get; set; } Property Value string"
+  },
+  "api/Example.Domain.Common.BaseEntity.html": {
+    "href": "api/Example.Domain.Common.BaseEntity.html",
+    "title": "Class BaseEntity | example.org",
+    "keywords": "Class BaseEntity Namespace Example.Domain.Common Assembly Example.Domain.dll This abstract class serves as the base class for all your domain entities. It provides common functionality related to domain events. public abstract class BaseEntity Inheritance object BaseEntity Derived BaseAuditableEntity Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties DomainEvents This read-only property provides access to the list of domain events. The [NotMapped] attribute ensures that Entity Framework Core (if used) will not try to map this property to a database column. [NotMapped] public IReadOnlyCollection<BaseEvent> DomainEvents { get; } Property Value IReadOnlyCollection<BaseEvent> Id Each entity has a unique Id property, automatically generated as a GUID string. public string Id { get; set; } Property Value string Methods AddDomainEvent(BaseEvent) AddDomainEvent, RemoveDomainEvent and ClearDomainEvent: These methods allow you to manage the domain events associated with the entity. You can add new events, remove specific events, or clear the entire list. public void AddDomainEvent(BaseEvent domainEvent) Parameters domainEvent BaseEvent ClearDomainEvent() public void ClearDomainEvent() RemoveDomainEvent(BaseEvent) public void RemoveDomainEvent(BaseEvent domainEvent) Parameters domainEvent BaseEvent"
+  },
+  "api/Example.Domain.Common.BaseEvent.html": {
+    "href": "api/Example.Domain.Common.BaseEvent.html",
+    "title": "Class BaseEvent | example.org",
+    "keywords": "Class BaseEvent Namespace Example.Domain.Common Assembly Example.Domain.dll public abstract class BaseEvent : INotification Inheritance object BaseEvent Implements INotification Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString()"
+  },
+  "api/Example.Domain.Common.html": {
+    "href": "api/Example.Domain.Common.html",
+    "title": "Namespace Example.Domain.Common | example.org",
+    "keywords": "Namespace Example.Domain.Common Classes BaseAuditableEntity This class inherits from BaseEntity, which means it gains the domain event capabilities. Auditable entities can also raise domain events when created or modified. BaseEntity This abstract class serves as the base class for all your domain entities. It provides common functionality related to domain events. BaseEvent"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | example.org",
+    "keywords": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | example.org",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | example.org",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  },
+  "src/Example.Domain/Common/README.html": {
+    "href": "src/Example.Domain/Common/README.html",
+    "title": "| example.org",
+    "keywords": "How to Use: Create Domain Events: Define concrete event classes that inherit from BaseEvent, representing specific events in your domain (e.g., UserCreatedEvent, OrderPlacedEvent, etc.). Raise Events in Entities: In your entity classes (derived from BaseEntity), raise domain events when significant actions or state changes occur. Use the AddDomainEvent method to add the events to the entity's _domainEvents list. Handle Events: Implement mechanisms to publish and handle these domain events. This often involves using a library like MediatR, where you define event handlers that subscribe to specific event types and perform actions in response to those events. public class User : BaseEntity // User entity inherits from BaseEntity { // ... other properties and methods public void ChangePassword(string newPassword) { // ... logic to change the password // Raise a PasswordChangedEvent AddDomainEvent(new PasswordChangedEvent(this.Id, newPassword)); } } Benefits of this Implementation: Centralized Event Management: The BaseEntity provides a consistent way to manage domain events across all your entities. Loose Coupling: Entities are decoupled from event handlers, promoting modularity and flexibility. Flexibility: You can easily add new event types and handlers without modifying existing code. Additional Considerations: Event Persistence: You might need to consider how to persist domain events if you require them for auditing, event sourcing, or other purposes. Event Ordering: If the order of events is important, you may need to implement mechanisms to ensure events are processed in the correct sequence. Error Handling: Implement error handling strategies for event processing to ensure robustness and reliability."
+  }
+}

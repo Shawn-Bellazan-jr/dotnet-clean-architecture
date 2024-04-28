@@ -1,0 +1,21 @@
+{
+  "Example.Application.Common.Models": "Example.Application.Common.Models.yml",
+  "Example.Application.Common.Models.Result": "Example.Application.Common.Models.Result.yml",
+  "Example.Application.Common.Models.Result.Errors": "Example.Application.Common.Models.Result.yml",
+  "Example.Application.Common.Models.Result.Failure(System.Collections.Generic.IEnumerable{System.String})": "Example.Application.Common.Models.Result.yml",
+  "Example.Application.Common.Models.Result.Succeeded": "Example.Application.Common.Models.Result.yml",
+  "Example.Application.Common.Models.Result.Success": "Example.Application.Common.Models.Result.yml",
+  "Example.Domain.Common": "Example.Domain.Common.yml",
+  "Example.Domain.Common.BaseAuditableEntity": "Example.Domain.Common.BaseAuditableEntity.yml",
+  "Example.Domain.Common.BaseAuditableEntity.Created": "Example.Domain.Common.BaseAuditableEntity.yml",
+  "Example.Domain.Common.BaseAuditableEntity.CreatedBy": "Example.Domain.Common.BaseAuditableEntity.yml",
+  "Example.Domain.Common.BaseAuditableEntity.LastModified": "Example.Domain.Common.BaseAuditableEntity.yml",
+  "Example.Domain.Common.BaseAuditableEntity.LastModifiedBy": "Example.Domain.Common.BaseAuditableEntity.yml",
+  "Example.Domain.Common.BaseEntity": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEntity.AddDomainEvent(Example.Domain.Common.BaseEvent)": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEntity.ClearDomainEvent": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEntity.DomainEvents": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEntity.Id": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEntity.RemoveDomainEvent(Example.Domain.Common.BaseEvent)": "Example.Domain.Common.BaseEntity.yml",
+  "Example.Domain.Common.BaseEvent": "Example.Domain.Common.BaseEvent.yml"
+}

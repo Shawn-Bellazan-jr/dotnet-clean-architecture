@@ -1,0 +1,626 @@
+### YamlMime:ManagedReference
+items:
+- uid: Example.Domain.Common.BaseEntity
+  commentId: T:Example.Domain.Common.BaseEntity
+  id: BaseEntity
+  parent: Example.Domain.Common
+  children:
+  - Example.Domain.Common.BaseEntity.AddDomainEvent(Example.Domain.Common.BaseEvent)
+  - Example.Domain.Common.BaseEntity.ClearDomainEvent
+  - Example.Domain.Common.BaseEntity.DomainEvents
+  - Example.Domain.Common.BaseEntity.Id
+  - Example.Domain.Common.BaseEntity.RemoveDomainEvent(Example.Domain.Common.BaseEvent)
+  langs:
+  - csharp
+  - vb
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: Example.Domain.Common.BaseEntity
+  type: Class
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: BaseEntity
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 12
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  summary: This abstract class serves as the base class for all your domain entities. It provides common functionality related to domain events.
+  example: []
+  syntax:
+    content: public abstract class BaseEntity
+    content.vb: Public MustInherit Class BaseEntity
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Example.Domain.Common.BaseAuditableEntity
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Example.Domain.Common.BaseEntity.Id
+  commentId: P:Example.Domain.Common.BaseEntity.Id
+  id: Id
+  parent: Example.Domain.Common.BaseEntity
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BaseEntity.Id
+  fullName: Example.Domain.Common.BaseEntity.Id
+  type: Property
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: Id
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 17
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  summary: Each entity has a unique `Id` property, automatically generated as a GUID string.
+  example: []
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Example.Domain.Common.BaseEntity.Id*
+- uid: Example.Domain.Common.BaseEntity.DomainEvents
+  commentId: P:Example.Domain.Common.BaseEntity.DomainEvents
+  id: DomainEvents
+  parent: Example.Domain.Common.BaseEntity
+  langs:
+  - csharp
+  - vb
+  name: DomainEvents
+  nameWithType: BaseEntity.DomainEvents
+  fullName: Example.Domain.Common.BaseEntity.DomainEvents
+  type: Property
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: DomainEvents
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 26
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  summary: >-
+    This read-only property provides access to the list of domain events. 
+
+    The `[NotMapped]` attribute ensures that Entity Framework Core (if used) will not try to map this property to a database column.
+  example: []
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public IReadOnlyCollection<BaseEvent> DomainEvents { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{Example.Domain.Common.BaseEvent}
+    content.vb: >-
+      <NotMapped>
+
+      Public ReadOnly Property DomainEvents As IReadOnlyCollection(Of BaseEvent)
+  overload: Example.Domain.Common.BaseEntity.DomainEvents*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+- uid: Example.Domain.Common.BaseEntity.AddDomainEvent(Example.Domain.Common.BaseEvent)
+  commentId: M:Example.Domain.Common.BaseEntity.AddDomainEvent(Example.Domain.Common.BaseEvent)
+  id: AddDomainEvent(Example.Domain.Common.BaseEvent)
+  parent: Example.Domain.Common.BaseEntity
+  langs:
+  - csharp
+  - vb
+  name: AddDomainEvent(BaseEvent)
+  nameWithType: BaseEntity.AddDomainEvent(BaseEvent)
+  fullName: Example.Domain.Common.BaseEntity.AddDomainEvent(Example.Domain.Common.BaseEvent)
+  type: Method
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: AddDomainEvent
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 33
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  summary: >-
+    AddDomainEvent, RemoveDomainEvent and ClearDomainEvent: These methods allow you to manage the domain events associated with the entity. 
+
+    You can add new events, remove specific events, or clear the entire list.
+  example: []
+  syntax:
+    content: public void AddDomainEvent(BaseEvent domainEvent)
+    parameters:
+    - id: domainEvent
+      type: Example.Domain.Common.BaseEvent
+      description: ''
+    content.vb: Public Sub AddDomainEvent(domainEvent As BaseEvent)
+  overload: Example.Domain.Common.BaseEntity.AddDomainEvent*
+- uid: Example.Domain.Common.BaseEntity.RemoveDomainEvent(Example.Domain.Common.BaseEvent)
+  commentId: M:Example.Domain.Common.BaseEntity.RemoveDomainEvent(Example.Domain.Common.BaseEvent)
+  id: RemoveDomainEvent(Example.Domain.Common.BaseEvent)
+  parent: Example.Domain.Common.BaseEntity
+  langs:
+  - csharp
+  - vb
+  name: RemoveDomainEvent(BaseEvent)
+  nameWithType: BaseEntity.RemoveDomainEvent(BaseEvent)
+  fullName: Example.Domain.Common.BaseEntity.RemoveDomainEvent(Example.Domain.Common.BaseEvent)
+  type: Method
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: RemoveDomainEvent
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 34
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  syntax:
+    content: public void RemoveDomainEvent(BaseEvent domainEvent)
+    parameters:
+    - id: domainEvent
+      type: Example.Domain.Common.BaseEvent
+    content.vb: Public Sub RemoveDomainEvent(domainEvent As BaseEvent)
+  overload: Example.Domain.Common.BaseEntity.RemoveDomainEvent*
+- uid: Example.Domain.Common.BaseEntity.ClearDomainEvent
+  commentId: M:Example.Domain.Common.BaseEntity.ClearDomainEvent
+  id: ClearDomainEvent
+  parent: Example.Domain.Common.BaseEntity
+  langs:
+  - csharp
+  - vb
+  name: ClearDomainEvent()
+  nameWithType: BaseEntity.ClearDomainEvent()
+  fullName: Example.Domain.Common.BaseEntity.ClearDomainEvent()
+  type: Method
+  source:
+    remote:
+      path: src/Example.Domain/Common/BaseEntity.cs
+      branch: dev
+      repo: https://github.com/Shawn-Bellazan-jr/dotnet-clean-architecture.git
+    id: ClearDomainEvent
+    path: src/Example.Domain/Common/BaseEntity.cs
+    startLine: 35
+  assemblies:
+  - Example.Domain
+  namespace: Example.Domain.Common
+  syntax:
+    content: public void ClearDomainEvent()
+    content.vb: Public Sub ClearDomainEvent()
+  overload: Example.Domain.Common.BaseEntity.ClearDomainEvent*
+references:
+- uid: Example.Domain.Common
+  commentId: N:Example.Domain.Common
+  href: Example.html
+  name: Example.Domain.Common
+  nameWithType: Example.Domain.Common
+  fullName: Example.Domain.Common
+  spec.csharp:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Domain
+    name: Domain
+    href: Example.Domain.html
+  - name: .
+  - uid: Example.Domain.Common
+    name: Common
+    href: Example.Domain.Common.html
+  spec.vb:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Domain
+    name: Domain
+    href: Example.Domain.html
+  - name: .
+  - uid: Example.Domain.Common
+    name: Common
+    href: Example.Domain.Common.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Example.Domain.Common.BaseEntity.Id*
+  commentId: Overload:Example.Domain.Common.BaseEntity.Id
+  href: Example.Domain.Common.BaseEntity.html#Example_Domain_Common_BaseEntity_Id
+  name: Id
+  nameWithType: BaseEntity.Id
+  fullName: Example.Domain.Common.BaseEntity.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Example.Domain.Common.BaseEntity.DomainEvents*
+  commentId: Overload:Example.Domain.Common.BaseEntity.DomainEvents
+  href: Example.Domain.Common.BaseEntity.html#Example_Domain_Common_BaseEntity_DomainEvents
+  name: DomainEvents
+  nameWithType: BaseEntity.DomainEvents
+  fullName: Example.Domain.Common.BaseEntity.DomainEvents
+- uid: System.Collections.Generic.IReadOnlyCollection{Example.Domain.Common.BaseEvent}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Example.Domain.Common.BaseEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<BaseEvent>
+  nameWithType: IReadOnlyCollection<BaseEvent>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Example.Domain.Common.BaseEvent>
+  nameWithType.vb: IReadOnlyCollection(Of BaseEvent)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Example.Domain.Common.BaseEvent)
+  name.vb: IReadOnlyCollection(Of BaseEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Example.Domain.Common.BaseEvent
+    name: BaseEvent
+    href: Example.Domain.Common.BaseEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Example.Domain.Common.BaseEvent
+    name: BaseEvent
+    href: Example.Domain.Common.BaseEvent.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Example.Domain.Common.BaseEntity.AddDomainEvent*
+  commentId: Overload:Example.Domain.Common.BaseEntity.AddDomainEvent
+  href: Example.Domain.Common.BaseEntity.html#Example_Domain_Common_BaseEntity_AddDomainEvent_Example_Domain_Common_BaseEvent_
+  name: AddDomainEvent
+  nameWithType: BaseEntity.AddDomainEvent
+  fullName: Example.Domain.Common.BaseEntity.AddDomainEvent
+- uid: Example.Domain.Common.BaseEvent
+  commentId: T:Example.Domain.Common.BaseEvent
+  parent: Example.Domain.Common
+  href: Example.Domain.Common.BaseEvent.html
+  name: BaseEvent
+  nameWithType: BaseEvent
+  fullName: Example.Domain.Common.BaseEvent
+- uid: Example.Domain.Common.BaseEntity.RemoveDomainEvent*
+  commentId: Overload:Example.Domain.Common.BaseEntity.RemoveDomainEvent
+  href: Example.Domain.Common.BaseEntity.html#Example_Domain_Common_BaseEntity_RemoveDomainEvent_Example_Domain_Common_BaseEvent_
+  name: RemoveDomainEvent
+  nameWithType: BaseEntity.RemoveDomainEvent
+  fullName: Example.Domain.Common.BaseEntity.RemoveDomainEvent
+- uid: Example.Domain.Common.BaseEntity.ClearDomainEvent*
+  commentId: Overload:Example.Domain.Common.BaseEntity.ClearDomainEvent
+  href: Example.Domain.Common.BaseEntity.html#Example_Domain_Common_BaseEntity_ClearDomainEvent
+  name: ClearDomainEvent
+  nameWithType: BaseEntity.ClearDomainEvent
+  fullName: Example.Domain.Common.BaseEntity.ClearDomainEvent

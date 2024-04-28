@@ -1,0 +1,17 @@
+### YamlMime:TableOfContent
+items:
+- uid: Example.Application.Common.Models
+  name: Example.Application.Common.Models
+  items:
+  - uid: Example.Application.Common.Models.Result
+    name: Result
+- uid: Example.Domain.Common
+  name: Example.Domain.Common
+  items:
+  - uid: Example.Domain.Common.BaseAuditableEntity
+    name: BaseAuditableEntity
+  - uid: Example.Domain.Common.BaseEntity
+    name: BaseEntity
+  - uid: Example.Domain.Common.BaseEvent
+    name: BaseEvent
+memberLayout: SamePage

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Example.Application.Common.Models
+  commentId: N:Example.Application.Common.Models
+  id: Example.Application.Common.Models
+  children:
+  - Example.Application.Common.Models.Result
+  langs:
+  - csharp
+  - vb
+  name: Example.Application.Common.Models
+  nameWithType: Example.Application.Common.Models
+  fullName: Example.Application.Common.Models
+  type: Namespace
+  assemblies:
+  - Example.Application
+references:
+- uid: Example.Application.Common.Models.Result
+  commentId: T:Example.Application.Common.Models.Result
+  parent: Example.Application.Common.Models
+  href: Example.Application.Common.Models.Result.html
+  name: Result
+  nameWithType: Result
+  fullName: Example.Application.Common.Models.Result
+- uid: Example.Application.Common.Models
+  commentId: N:Example.Application.Common.Models
+  href: Example.html
+  name: Example.Application.Common.Models
+  nameWithType: Example.Application.Common.Models
+  fullName: Example.Application.Common.Models
+  spec.csharp:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Application
+    name: Application
+    href: Example.Application.html
+  - name: .
+  - uid: Example.Application.Common
+    name: Common
+    href: Example.Application.Common.html
+  - name: .
+  - uid: Example.Application.Common.Models
+    name: Models
+    href: Example.Application.Common.Models.html
+  spec.vb:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Application
+    name: Application
+    href: Example.Application.html
+  - name: .
+  - uid: Example.Application.Common
+    name: Common
+    href: Example.Application.Common.html
+  - name: .
+  - uid: Example.Application.Common.Models
+    name: Models
+    href: Example.Application.Common.Models.html

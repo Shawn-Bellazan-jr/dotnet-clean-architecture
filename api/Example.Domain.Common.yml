@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: Example.Domain.Common
+  commentId: N:Example.Domain.Common
+  id: Example.Domain.Common
+  children:
+  - Example.Domain.Common.BaseAuditableEntity
+  - Example.Domain.Common.BaseEntity
+  - Example.Domain.Common.BaseEvent
+  langs:
+  - csharp
+  - vb
+  name: Example.Domain.Common
+  nameWithType: Example.Domain.Common
+  fullName: Example.Domain.Common
+  type: Namespace
+  assemblies:
+  - Example.Domain
+references:
+- uid: Example.Domain.Common.BaseAuditableEntity
+  commentId: T:Example.Domain.Common.BaseAuditableEntity
+  href: Example.Domain.Common.BaseAuditableEntity.html
+  name: BaseAuditableEntity
+  nameWithType: BaseAuditableEntity
+  fullName: Example.Domain.Common.BaseAuditableEntity
+- uid: Example.Domain.Common.BaseEntity
+  commentId: T:Example.Domain.Common.BaseEntity
+  parent: Example.Domain.Common
+  href: Example.Domain.Common.BaseEntity.html
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: Example.Domain.Common.BaseEntity
+- uid: Example.Domain.Common.BaseEvent
+  commentId: T:Example.Domain.Common.BaseEvent
+  parent: Example.Domain.Common
+  href: Example.Domain.Common.BaseEvent.html
+  name: BaseEvent
+  nameWithType: BaseEvent
+  fullName: Example.Domain.Common.BaseEvent
+- uid: Example.Domain.Common
+  commentId: N:Example.Domain.Common
+  href: Example.html
+  name: Example.Domain.Common
+  nameWithType: Example.Domain.Common
+  fullName: Example.Domain.Common
+  spec.csharp:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Domain
+    name: Domain
+    href: Example.Domain.html
+  - name: .
+  - uid: Example.Domain.Common
+    name: Common
+    href: Example.Domain.Common.html
+  spec.vb:
+  - uid: Example
+    name: Example
+    href: Example.html
+  - name: .
+  - uid: Example.Domain
+    name: Domain
+    href: Example.Domain.html
+  - name: .
+  - uid: Example.Domain.Common
+    name: Common
+    href: Example.Domain.Common.html
